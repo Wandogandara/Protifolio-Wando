@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Profissional | Design e Desenvolvimento Criativo</title>
+    <meta name="description" content="Portfólio profissional de design e desenvolvimento web. Serviços de criação de sites, design UX/UI e soluções digitais personalizadas.">
+    <meta name="keywords" content="portfólio, design, desenvolvimento web, UX/UI, sites responsivos">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset e configurações gerais */
+        :root {
+            --roxo-escuro: #2a1b3d;
+            --roxo-medio: #44318d;
+            --roxo-claro: #8265c9;
+            --azul-roxo: #5d3fd3;
+            --azul-medio: #4a6fa5;
+            --preto: #0d0d0d;
+            --cinza-escuro: #1a1a1a;
+            --cinza-medio: #333333;
+            --cinza-claro: #e6e6e6;
+            --branco: #ffffff;
+            --gradiente-roxo: linear-gradient(135deg, var(--roxo-escuro) 0%, var(--azul-roxo) 100%);
+            --sombra: 0 10px 30px rgba(0, 0, 0, 0.15);
+            --transicao: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--cinza-claro);
+            background-color: var(--preto);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--branco);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--gradiente-roxo);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--roxo-claro);
+            transition: var(--transicao);
+        }
+
+        a:hover {
+            color: var(--azul-roxo);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        section {
+            padding: 5rem 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--gradiente-roxo);
+            color: var(--branco);
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+            transition: var(--transicao);
+            box-shadow: var(--sombra);
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+            background: linear-gradient(135deg, var(--roxo-medio) 0%, var(--azul-medio) 100%);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-whatsapp:hover {
+            background: #1da851;
+        }
+
+        /* Header e Navegação */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(13, 13, 13, 0.95);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transicao);
+        }
+
+        .header.scrolled {
+            background-color: var(--preto);
+            padding: 0.5rem 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 1.5rem;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--branco);
+        }
+
+        .logo span {
+            color: var(--azul-roxo);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .nav-link {
+            color: var(--branco);
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--azul-roxo);
+            left: 0;
+            bottom: 0;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .nav-link.active {
+            color: var(--azul-roxo);
+        }
+
+        .nav-link.active:after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.8rem;
+            color: var(--branco);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(13, 13, 13, 0.85), rgba(13, 13, 13, 0.9)), url('https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, var(--roxo-claro), var(--azul-roxo));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--cinza-claro);
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Sobre Section */
+        .sobre {
+            background-color: var(--cinza-escuro);
+        }
+
+        .sobre-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .sobre-img {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--sombra);
+            position: relative;
+        }
+
+        .sobre-img:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: linear-gradient(to bottom right, rgba(90, 63, 211, 0.2), rgba(42, 27, 61, 0.4));
+        }
+
+        .sobre-img img {
+            width: 100%;
+            height: auto;
+            transition: var(--transicao);
+        }
+
+        .sobre-img:hover img {
+            transform: scale(1.05);
+        }
+
+        .sobre-texto h2 {
+            text-align: left;
+        }
+
+        .sobre-texto h2:after {
+            left: 0;
+            transform: translateX(0);
+        }
+
+        .sobre-texto p {
+            margin-bottom: 1.8rem;
+            color: var(--cinza-claro);
+        }
+
+        .habilidades {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .habilidade {
+            background-color: var(--roxo-medio);
+            color: var(--branco);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Serviços Section */
+        .servicos {
+            background-color: var(--preto);
+        }
+
+        .servicos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .servico-card {
+            background-color: var(--cinza-escuro);
+            border-radius: 15px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: var(--transicao);
+            border: 1px solid transparent;
+        }
+
+        .servico-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--roxo-medio);
+            box-shadow: 0 15px 30px rgba(90, 63, 211, 0.15);
+        }
+
+        .servico-icon {
+            font-size: 3rem;
+            color: var(--azul-roxo);
+            margin-bottom: 1.5rem;
+        }
+
+        .servico-card h3 {
+            margin-bottom: 1rem;
+        }
+
+        .servico-card p {
+            color: var(--cinza-claro);
+        }
+
+        /* Projetos Section */
+        .projetos {
+            background-color: var(--cinza-escuro);
+        }
+
+        .projetos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .projeto-card {
+            background-color: var(--preto);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--sombra);
+            transition: var(--transicao);
+        }
+
+        .projeto-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .projeto-img {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .projeto-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transicao);
+        }
+
+        .projeto-card:hover .projeto-img img {
+            transform: scale(1.1);
+        }
+
+        .projeto-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(90, 63, 211, 0.8), rgba(42, 27, 61, 0.9));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transicao);
+        }
+
+        .projeto-card:hover .projeto-overlay {
+            opacity: 1;
+        }
+
+        .projeto-overlay .btn {
+            padding: 0.8rem 1.8rem;
+            font-size: 0.9rem;
+        }
+
+        .projeto-info {
+            padding: 2rem;
+        }
+
+        .projeto-info h3 {
+            margin-bottom: 0.8rem;
+        }
+
+        .projeto-info p {
+            color: var(--cinza-claro);
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .projeto-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .projeto-tag {
+            background-color: var(--roxo-medio);
+            color: var(--branco);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Contato Section */
+        .contato {
+            background-color: var(--preto);
+        }
+
+        .contato-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .contato-info {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .contato-info h2 {
+            margin-bottom: 1rem;
+        }
+
+        .contato-info p {
+            color: var(--cinza-claro);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .whatsapp-opcoes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .whatsapp-card {
+            background-color: var(--cinza-escuro);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transicao);
+            border: 1px solid transparent;
+        }
+
+        .whatsapp-card:hover {
+            transform: translateY(-5px);
+            border-color: #25D366;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.1);
+        }
+
+        .whatsapp-icon {
+            font-size: 2.5rem;
+            color: #25D366;
+            margin-bottom: 1rem;
+        }
+
+        .whatsapp-card h3 {
+            margin-bottom: 1rem;
+            color: var(--branco);
+        }
+
+        .whatsapp-card p {
+            color: var(--cinza-claro);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .contato-diretos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contato-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--cinza-escuro);
+            border-radius: 15px;
+            min-width: 200px;
+            transition: var(--transicao);
+        }
+
+        .contato-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .contato-icon {
+            font-size: 2rem;
+            color: var(--azul-roxo);
+            margin-bottom: 1rem;
+        }
+
+        .contato-text h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .contato-text p {
+            margin-bottom: 0;
+            color: var(--cinza-claro);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--preto);
+            padding: 4rem 0 2rem;
+            border-top: 1px solid var(--cinza-medio);
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--branco);
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo span {
+            color: var(--azul-roxo);
+        }
+
+        .footer-info p {
+            margin-bottom: 1.5rem;
+            color: var(--cinza-claro);
+        }
+
+        .footer-titulo {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--branco);
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--cinza-claro);
+            transition: var(--transicao);
+        }
+
+        .footer-links a:hover {
+            color: var(--azul-roxo);
+            padding-left: 5px;
+        }
+
+        .redes-sociais {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .rede-social {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--cinza-medio);
+            border-radius: 50%;
+            color: var(--branco);
+            transition: var(--transicao);
+        }
+
+        .rede-social:hover {
+            background-color: var(--azul-roxo);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--cinza-medio);
+            color: var(--cinza-claro);
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom a {
+            color: var(--azul-roxo);
+        }
+
+        /* Animações ao rolar */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Alertas personalizados */
+        .alert {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            color: var(--branco);
+            font-weight: 500;
+            box-shadow: var(--sombra);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transform: translateX(150%);
+            transition: transform 0.5s ease;
+        }
+
+        .alert.show {
+            transform: translateX(0);
+        }
+
+        .alert-success {
+            background-color: #28a745;
+        }
+
+        .alert-error {
+            background-color: #dc3545;
+        }
+
+        /* Responsividade */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+            
+            .sobre-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .sobre-texto h2 {
+                text-align: center;
+            }
+            
+            .sobre-texto h2:after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .projetos-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                flex-direction: column;
+                background-color: var(--preto);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+                padding: 2rem 0;
+                z-index: 999;
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            .nav-menu li {
+                margin: 1rem 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+            
+            .whatsapp-opcoes {
+                grid-template-columns: 1fr;
+            }
+            
+            .contato-diretos {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 3rem 1rem;
+            }
+            
+            .servico-card, .whatsapp-card {
+                padding: 2rem;
+            }
+            
+            .projetos-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header com Navegação -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">Port<span>fólio</span></a>
+            
+            <nav class="nav" aria-label="Navegação principal">
+                <ul class="nav-menu">
+                    <li><a href="#inicio" class="nav-link active">Início</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                    <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+            
+            <div class="hamburger" id="hamburger" aria-label="Menu móvel" role="button" tabindex="0">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção Hero -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1>Criando Experiências Digitais Memoráveis</h1>
+                <p>Sou um desenvolvedor e designer especializado em criar soluções digitais inovadoras que combinam estética, funcionalidade e performance para impulsionar seu negócio.</p>
+                <div class="hero-btns">
+                    <a href="#contato" class="btn">Comece seu projeto</a>
+                    <a href="#projetos" class="btn">Ver projetos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section class="sobre" id="sobre">
+        <div class="container">
+            <h2 class="fade-in">Sobre Mim</h2>
+            <div class="sobre-container">
+                <div class="sobre-img fade-in">
+                    <img src="imagem/imagen-perfil.png" alt="Foto do profissional">
+                </div>
+                <div class="sobre-texto fade-in">
+                    <h2>Transformando ideias em realidade digital</h2>
+                    <p>Com mais de 8 anos de experiência no mercado de desenvolvimento web e design, tenho ajudado empresas e empreendedores a estabelecerem uma presença digital impactante e funcional.</p>
+                    <p>Minha abordagem combina técnicas modernas de desenvolvimento com princípios de design centrado no usuário, resultando em soluções que não apenas impressionam visualmente, mas também oferecem uma experiência excepcional.</p>
+                    <p>Estou sempre em busca de novos desafios e oportunidades para criar projetos inovadores que façam a diferença.</p>
+                    
+                    <div class="habilidades">
+                        <span class="habilidade">UI/UX Design</span>
+                        <span class="habilidade">Desenvolvimento Frontend</span>
+                        <span class="habilidade">Responsividade</span>
+                        <span class="habilidade">Otimização SEO</span>
+                        <span class="habilidade">Performance</span>
+                        <span class="habilidade">Acessibilidade</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Serviços -->
+    <section class="servicos" id="servicos">
+        <div class="container">
+            <h2 class="fade-in">Meus Serviços</h2>
+            <div class="servicos-grid">
+                <div class="servico-card fade-in">
+                    <div class="servico-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Desenvolvimento Web</h3>
+                    <p>Criação de sites responsivos e otimizados, com foco em performance, SEO e experiência do usuário, utilizando as tecnologias mais atuais do mercado.</p>
+                </div>
+                
+                <div class="servico-card fade-in">
+                    <div class="servico-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Design de interfaces intuitivas e atraentes que proporcionam uma experiência excepcional ao usuário, aumentando engajamento e conversões.</p>
+                </div>
+                
+                <div class="servico-card fade-in">
+                    <div class="servico-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Apps Responsivos</h3>
+                    <p>Desenvolvimento de aplicações web responsivas que funcionam perfeitamente em todos os dispositivos, desde smartphones até desktops.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section class="projetos" id="projetos">
+        <div class="container">
+            <h2 class="fade-in">Projetos Realizados</h2>
+            <div class="projetos-grid">
+                <div class="projeto-card fade-in">
+                    <div class="projeto-img">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Site de E-commerce">
+                        <div class="projeto-overlay">
+                            <a href="#" class="btn">Ver detalhes</a>
+                        </div>
+                    </div>
+                    <div class="projeto-info">
+                        <h3>E-commerce Moderno</h3>
+                        <p>Plataforma de e-commerce completa com carrinho de compras, checkout seguro e integração com meios de pagamento.</p>
+                        <div class="projeto-tags">
+                            <span class="projeto-tag">HTML/CSS</span>
+                            <span class="projeto-tag">JavaScript</span>
+                            <span class="projeto-tag">React</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="projeto-card fade-in">
+                    <div class="projeto-img">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2015&q=80" alt="Dashboard Analytics">
+                        <div class="projeto-overlay">
+                            <a href="#" class="btn">Ver detalhes</a>
+                        </div>
+                    </div>
+                    <div class="projeto-info">
+                        <h3>Dashboard Analytics</h3>
+                        <p>Dashboard interativo para análise de dados com gráficos dinâmicos, filtros avançados e visualização em tempo real.</p>
+                        <div class="projeto-tags">
+                            <span class="projeto-tag">JavaScript</span>
+                            <span class="projeto-tag">Chart.js</span>
+                            <span class="projeto-tag">API REST</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="projeto-card fade-in">
+                    <div class="projeto-img">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="App de Saúde">
+                        <div class="projeto-overlay">
+                            <a href="#" class="btn">Ver detalhes</a>
+                        </div>
+                    </div>
+                    <div class="projeto-info">
+                        <h3>App de Saúde</h3>
+                        <p>Aplicativo móvel para acompanhamento de saúde com monitoramento de atividades, dieta e bem-estar.</p>
+                        <div class="projeto-tags">
+                            <span class="projeto-tag">React Native</span>
+                            <span class="projeto-tag">Firebase</span>
+                            <span class="projeto-tag">UI/UX Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section class="contato" id="contato">
+        <div class="container">
+            <div class="contato-info fade-in">
+                <h2>Entre em Contato</h2>
+                <p>Escolha a melhor forma de entrar em contato comigo. Estou disponível para tirar dúvidas, fazer orçamentos e discutir novos projetos.</p>
+            </div>
+            
+            <div class="whatsapp-opcoes">
+                <div class="whatsapp-card fade-in">
+                    <div class="whatsapp-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>Orçamento</h3>
+                    <p>Solicite um orçamento personalizado para o seu projeto. Vamos conversar sobre suas necessidades e definir a melhor solução.</p>
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de solicitar um orçamento para um projeto." class="btn btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Pedir Orçamento
+                    </a>
+                </div>
+                
+                <div class="whatsapp-card fade-in">
+                    <div class="whatsapp-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>Tirar Dúvidas</h3>
+                    <p>Está com alguma dúvida sobre serviços, prazos ou tecnologias? Entre em contato para esclarecer todas as suas perguntas.</p>
+                    <a href="https://wa.me/5511999999999?text=Olá! Tenho algumas dúvidas sobre os seus serviços." class="btn btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Tirar Dúvidas
+                    </a>
+                </div>
+                
+                <div class="whatsapp-card fade-in">
+                    <div class="whatsapp-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>Projeto Urgente</h3>
+                    <p>Precisa de um projeto com urgência? Entre em contato para discutirmos prazos e a melhor forma de atendê-lo rapidamente.</p>
+                    <a href="https://wa.me/5511999999999?text=Olá! Tenho um projeto urgente e gostaria de conversar." class="btn btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Projeto Urgente
+                    </a>
+                </div>
+            </div>
+            
+            <div class="contato-diretos">
+                <div class="contato-item fade-in">
+                    <div class="contato-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contato-text">
+                        <h4>Telefone</h4>
+                        <p>+55 (11) 99999-9999</p>
+                    </div>
+                </div>
+                
+                <div class="contato-item fade-in">
+                    <div class="contato-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contato-text">
+                        <h4>Email</h4>
+                        <p>contato@portfolio.dev</p>
+                    </div>
+                </div>
+                
+                <div class="contato-item fade-in">
+                    <div class="contato-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contato-text">
+                        <h4>Localização</h4>
+                        <p>São Paulo, Brasil</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-info">
+                    <div class="footer-logo">Port<span>fólio</span></div>
+                    <p>Criando experiências digitais excepcionais que conectam marcas a seus públicos-alvo e impulsionam resultados.</p>
+                    <div class="redes-sociais">
+                        <a href="#" class="rede-social" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="rede-social" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="rede-social" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="rede-social" aria-label="Behance">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-titulo">Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-titulo">Informações</h3>
+                    <ul>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="anoAtual"></span> Portfólio Profissional. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Alertas -->
+    <div id="alertContainer"></div>
+
+    <script>
+        // Menu responsivo
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            hamburger.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Fechar menu ao clicar em um link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Header com efeito ao rolar
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Scroll suave para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Ativar link ativo na navegação ao rolar
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        function ativarLinkAtivo() {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (scrollY >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', ativarLinkAtivo);
+        
+        // Animação ao rolar a página (fade-in)
+        function animacaoAoRolar() {
+            const elementos = document.querySelectorAll('.fade-in');
+            
+            elementos.forEach(elemento => {
+                const elementoPosicao = elemento.getBoundingClientRect().top;
+                const telaPosicao = window.innerHeight / 1.2;
+                
+                if (elementoPosicao < telaPosicao) {
+                    elemento.classList.add('visible');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', animacaoAoRolar);
+        // Executar uma vez ao carregar a página
+        window.addEventListener('load', animacaoAoRolar);
+        
+        // Função para mostrar alertas personalizados
+        function mostrarAlerta(mensagem, tipo) {
+            const alertContainer = document.getElementById('alertContainer');
+            
+            // Criar elemento de alerta
+            const alert = document.createElement('div');
+            alert.className = `alert alert-${tipo}`;
+            alert.innerHTML = `
+                <i class="fas fa-${tipo === 'success' ? 'check-circle' : 'exclamation-circle'}"></i>
+                <span>${mensagem}</span>
+            `;
+            
+            // Adicionar ao container
+            alertContainer.appendChild(alert);
+            
+            // Mostrar alerta
+            setTimeout(() => {
+                alert.classList.add('show');
+            }, 10);
+            
+            // Remover alerta após 5 segundos
+            setTimeout(() => {
+                alert.classList.remove('show');
+                setTimeout(() => {
+                    alert.remove();
+                }, 500);
+            }, 5000);
+        }
+        
+        // Atualizar ano no footer
+        document.getElementById('anoAtual').textContent = new Date().getFullYear();
+        
+        // Adicionar acessibilidade ao menu hamburger
+        hamburger.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                hamburger.click();
+            }
+        });
+        
+        // Mensagem de confirmação ao clicar em WhatsApp
+        document.querySelectorAll('.btn-whatsapp').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Em um caso real, isso abriria o WhatsApp
+                // Aqui apenas mostramos uma mensagem de confirmação
+                mostrarAlerta('Você será redirecionado para o WhatsApp em instantes!', 'success');
+            });
+        });
+        
+        // Adicionar interatividade aos cards de projeto
+        document.querySelectorAll('.projeto-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                // Previne o clique se for no botão "Ver detalhes"
+                if (!e.target.closest('.btn')) {
+                    const projetoTitle = this.querySelector('h3').textContent;
+                    mostrarAlerta(`Você clicou no projeto: ${projetoTitle}. Em um site real, isso abriria uma página com mais detalhes.`, 'success');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
